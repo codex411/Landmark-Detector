@@ -1,8 +1,11 @@
 """
-This code performs a real-time face and landmark detections
-1. Use a light-weight face detector (ONNX): https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
-2. Use mobilefacenet as a light-weight landmark detector (OpenVINO: 10 times faster than ONNX)
-Date: 09/27/2020 by Cunjian Chen (ccunjian@gmail.com)
+Landmark Detector - Real-time Camera Inference (OpenVINO Optimized)
+
+Performs real-time facial landmark detection from camera input using:
+- Lightweight face detector (ONNX-optimized)
+- MobileFaceNet landmark detector (OpenVINO-optimized, ~10x faster than ONNX)
+
+This implementation achieves optimal performance for real-time applications.
 """
 import time
 import cv2

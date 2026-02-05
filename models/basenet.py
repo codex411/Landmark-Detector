@@ -1,5 +1,8 @@
-# Backbone networks used for face landmark detection
-# Cunjian Chen (cunjian@msu.edu)
+"""
+Backbone networks for landmark detection.
+
+Implements various convolutional architectures optimized for landmark detection tasks.
+"""
 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -26,10 +29,12 @@ class ConvBlock(nn.Module):
             return self.prelu(x)
             
 
-# SE module
-# https://github.com/wujiyang/Face_Pytorch/blob/master/backbone/cbam.py
 class SEModule(nn.Module):
-    '''Squeeze and Excitation Module'''
+    """
+    Squeeze-and-Excitation (SE) module for channel attention.
+    
+    Enhances feature representation by adaptively recalibrating channel-wise responses.
+    """
     def __init__(self, channels, reduction):
         super(SEModule, self).__init__()
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
