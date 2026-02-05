@@ -1,7 +1,11 @@
 """
-This code uses the onnx model to detect faces from live video or cameras.
-Use a much faster face detector: https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
-Date: 3/26/2020 by Cunjian Chen (ccunjian@gmail.com)
+Landmark Detector - Real-time Camera Inference (PFLD + ONNX)
+
+Performs real-time facial landmark detection from camera input using:
+- Lightweight face detector (ONNX-optimized)
+- PFLD (Practical Facial Landmark Detector) for landmark detection
+
+Optimized for mobile and edge device deployment.
 """
 import time
 import cv2

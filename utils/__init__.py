@@ -1,4 +1,7 @@
-"""Useful utils
+"""
+Utility functions for landmark detection.
+
+Includes visualization, evaluation, transforms, and logging utilities.
 """
 from .misc import *
 from .logger import *

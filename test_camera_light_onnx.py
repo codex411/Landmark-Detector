@@ -1,7 +1,10 @@
 """
-This code uses the onnx model to detect faces from live video or cameras.
-Use a much faster face detector: https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
-Date: 3/26/2020 by Cunjian Chen (ccunjian@gmail.com)
+Landmark Detector - Real-time Camera Inference (ONNX Optimized)
+
+Performs real-time facial landmark detection from camera input using ONNX-optimized models.
+Uses a lightweight face detector for optimal CPU performance.
+
+This implementation achieves real-time inference speeds on CPU.
 """
 import time
 import cv2

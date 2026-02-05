@@ -1,5 +1,9 @@
-# Face alignment demo
-# Cunjian Chen (ccunjian@gmail.com)
+"""
+Landmark Detector - Real-time Camera Inference (MTCNN + ONNX)
+
+Performs real-time facial landmark detection from camera input using MTCNN
+for face detection and ONNX-optimized models for landmark detection.
+"""
 from __future__ import division
 import argparse
 import torch
@@ -17,7 +21,7 @@ from MTCNN import detect_faces
 from PIL import Image
 import time
 
-parser = argparse.ArgumentParser(description='PyTorch face landmark')
+parser = argparse.ArgumentParser(description='Landmark Detector - Camera Inference (MTCNN)')
 # Datasets
 parser.add_argument('-img', '--image', default='face76', type=str)
 parser.add_argument('-j', '--workers', default=8, type=int, metavar='N',

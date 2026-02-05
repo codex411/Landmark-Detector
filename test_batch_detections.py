@@ -1,8 +1,12 @@
-# Face alignment and crop demo
-# Uses MTCNN, FaceBoxes or Retinaface as a face detector;
-# Support different backbones, include PFLD, MobileFaceNet, MobileNet;
-# Retinaface+MobileFaceNet gives the best peformance
-# Cunjian Chen (ccunjian@gmail.com), Feb. 2021
+"""
+Landmark Detector - Batch Processing Script
+
+Performs face detection and landmark detection on a batch of images.
+Supports multiple face detectors (MTCNN, FaceBoxes, RetinaFace) and
+backbone networks (PFLD, MobileFaceNet, MobileNet).
+
+Recommended configuration: RetinaFace detector with MobileFaceNet backbone.
+"""
 
 from __future__ import division
 import argparse
@@ -23,7 +27,7 @@ import glob
 import time
 from utils.align_trans import get_reference_facial_points, warp_and_crop_face
 
-parser = argparse.ArgumentParser(description='PyTorch face landmark')
+parser = argparse.ArgumentParser(description='Landmark Detector - Batch Processing')
 # Datasets
 parser.add_argument('--backbone', default='MobileFaceNet', type=str,
                     help='choose which backbone network to use: MobileNet, PFLD, MobileFaceNet')
